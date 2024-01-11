@@ -2,7 +2,7 @@ import 'package:excel/excel.dart';
 import 'package:excel_export/data.dart';
 
 class ExcelAPI {
-  void fillExcelSheet() {
+  void fillExcelSheet(String fileName) {
     var excel = Excel.createExcel();
     Sheet sheetObject = excel['demoSheet'];
 
@@ -23,7 +23,7 @@ class ExcelAPI {
     }
 
     excel.save(
-      fileName: 'example_excel.xlsx',
+      fileName: '$fileName.xlsx',
     );
   }
 }

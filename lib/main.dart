@@ -81,7 +81,7 @@ class _ExcelExportAppState extends State<ExcelExportApp> {
             ),
             actions: [
               TextButton(
-                  onPressed: () => ExcelAPI().fillExcelSheet(),
+                  onPressed: () => ExcelAPI().fillExcelSheet(_textFieldNameController.text),
                   child: const Text('Save'))
             ],
           );
